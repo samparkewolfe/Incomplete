@@ -63,23 +63,29 @@ public:
         g.setColour(Colours::lightgrey);
         
         Rectangle<int> area(getLocalBounds());
-        area.reduce(40, 0);
+        area.reduce(area.getWidth()/2, 0);
         
-        String text0("Incomplete is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition.");
-        String text1("The interface enables you to interact with Incomplete's system through a grid of 8x10 squares.");
-        String text2("Each square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds.");
-        String text3("Each vertical column stores samples from a different type of instrument.");
-        String text4("Within each column, only one sample can be played at any given time.");
-                    
-        String text5("By combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
+//        String text0("Incomplete is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition.");
+//        String text1("The interface enables you to interact with Incomplete's system through a grid of 8x10 squares.");
+//        String text2("Each square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds.");
+//        String text3("Each vertical column stores samples from a different type of instrument.");
+//        String text4("Within each column, only one sample can be played at any given time.");
+//                    
+//        String text5("By combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
         
-        float gap = area.getWidth()/6.0;
-        g.drawText(text0, area.removeFromTop(gap), Justification::centred, 50);
-        g.drawText(text1, area.removeFromTop(gap), Justification::centred, 50);
-        g.drawText(text2, area.removeFromTop(gap), Justification::centred, 50);
-        g.drawText(text3, area.removeFromTop(gap), Justification::centred, 50);
-        g.drawText(text4, area.removeFromTop(gap), Justification::centred, 50);
-        g.drawText(text5, area.removeFromTop(gap), Justification::centred, 50);
+        //juce::StringArray styles(Font::getAvailableStyles());
+        
+//        float gap = area.getWidth()/6.0;
+//        g.drawText(text0, area.removeFromTop(gap), Justification::centred, 50);
+//        g.drawText(text1, area.removeFromTop(gap), Justification::centred, 50);
+//        g.drawText(text2, area.removeFromTop(gap), Justification::centred, 50);
+//        g.drawText(text3, area.removeFromTop(gap), Justification::centred, 50);
+//        g.drawText(text4, area.removeFromTop(gap), Justification::centred, 50);
+//        g.drawText(text5, area.removeFromTop(gap), Justification::centred, 50);
+        
+        String text0("Incomplete is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition. The interface enables you to interact with Incomplete's system through a grid of 8x10 squares. Each square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds. Each vertical column stores samples from a different type of instrument. Within each column, only one sample can be played at any given time. By combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
+        
+        g.drawFittedText(text0, area, Justification::centred, 100);
     }
     
 };
