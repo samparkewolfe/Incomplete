@@ -243,14 +243,17 @@ void Mixer::resized()
     else
         buttonArea = area;
     
-    int buttonWidth = buttonArea.getWidth()/maxNumButtonsX;
-    int buttonHeight = (buttonArea.getHeight()/maxNumButtonsY);
+    float buttonWidth = float(buttonArea.getWidth())/float(maxNumButtonsX);
+    float buttonHeight = (float(buttonArea.getHeight())/float(maxNumButtonsY));
+    //float gap = 4;
     
     for(auto track : tracks)
     {
+        //buttonArea.removeFromLeft(gap);
         track->setButtonWidth(buttonWidth);
         track->setButtonHeight(buttonHeight);
         track->setBounds(buttonArea.removeFromLeft(buttonWidth));
+        //buttonArea.removeFromLeft(gap);
     }
     
     if(compressorOn)

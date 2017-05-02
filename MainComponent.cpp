@@ -13,7 +13,7 @@ MainContentComponent::MainContentComponent()
     addAndMakeVisible(&mixer);
     
     //setSize (640/2, 1136/2);
-    int size = 654;
+    int size = 600;
     setSize (size, size);
     setAudioChannels (0, 2);
 }

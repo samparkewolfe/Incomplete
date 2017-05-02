@@ -19,10 +19,12 @@ void LookAndFeel_Mixer::drawToggleButton (Graphics& g, ToggleButton& button, boo
 {
     
     Rectangle<int> buttonArea = button.getLocalBounds();
-    const int edge = 4;
+    const int edgeX = 4;
+    const int edgeY = 4;
+
 //    buttonArea.removeFromLeft (edge);
 //    buttonArea.removeFromTop (edge);
-    buttonArea.reduce(edge, edge);
+    buttonArea.reduce(edgeX, edgeY);
     // shadow
 //    g.setColour (Colours::lightgrey.withAlpha (0.5f));
 //    g.fillRect (buttonArea);

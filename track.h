@@ -193,7 +193,7 @@ protected:
     bool GhostAudioActivated;
     AudioSampleBuffer ghostAudioOutput;
     
-    int buttonWidth, buttonHeight;
+    float buttonWidth, buttonHeight;
     
     double bar_time, sample_time;
     double barLength, currentSampleLength;
@@ -231,8 +231,8 @@ public:
     void setCompresstionInput(float* left, float*right);
     
     void setCompressorActive(bool b)    {compressorActive=b;}
-    void setButtonWidth(int& i)         {buttonWidth=i;}
-    void setButtonHeight(int& i)        {buttonHeight=i;}
+    void setButtonWidth(float& i)         {buttonWidth=i;}
+    void setButtonHeight(float& i)        {buttonHeight=i;}
     void setBarLength(double& f)           {barLength=f;}
     void setCurrentSampleLength(double& f) {currentSampleLength=f;}
     void setGhostAudioActivated(bool b) {GhostAudioActivated=b;}

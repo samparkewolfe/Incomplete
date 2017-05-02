@@ -63,29 +63,17 @@ public:
         g.setColour(Colours::lightgrey);
         
         Rectangle<int> area(getLocalBounds());
-        area.reduce(area.getWidth()/2, 0);
+        area.reduce((area.getWidth()/4), 0);
         
-//        String text0("Incomplete is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition.");
-//        String text1("The interface enables you to interact with Incomplete's system through a grid of 8x10 squares.");
-//        String text2("Each square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds.");
-//        String text3("Each vertical column stores samples from a different type of instrument.");
-//        String text4("Within each column, only one sample can be played at any given time.");
-//                    
-//        String text5("By combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
+
         
-        //juce::StringArray styles(Font::getAvailableStyles());
         
-//        float gap = area.getWidth()/6.0;
-//        g.drawText(text0, area.removeFromTop(gap), Justification::centred, 50);
-//        g.drawText(text1, area.removeFromTop(gap), Justification::centred, 50);
-//        g.drawText(text2, area.removeFromTop(gap), Justification::centred, 50);
-//        g.drawText(text3, area.removeFromTop(gap), Justification::centred, 50);
-//        g.drawText(text4, area.removeFromTop(gap), Justification::centred, 50);
-//        g.drawText(text5, area.removeFromTop(gap), Justification::centred, 50);
+        String text0("'Incomplete' is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition.\n\nThe interface enables you to interact with Incomplete's system through a grid of 8x10 squares.\nEach square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds.\nEach vertical column stores samples from a different type of instrument.\nWithin each column, only one sample can be played at any given time.\n\nBy combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
         
-        String text0("Incomplete is a malleable piece of artwork which allows its content to be moulded by your aesthetic intuition. The interface enables you to interact with Incomplete's system through a grid of 8x10 squares. Each square triggers the playback of a sample; samples from the first eight columns are looped sequences while samples from the last two columns are one-shot sounds. Each vertical column stores samples from a different type of instrument. Within each column, only one sample can be played at any given time. By combining, removing and introducing the samples stored in the different columns you will be able to shape Incomplete's musical content thus becoming its co-author.");
         
-        g.drawFittedText(text0, area, Justification::centred, 100);
+        g.drawFittedText(text0, area, Justification::centredLeft, 100);
+        
+        
     }
     
 };
@@ -116,14 +104,14 @@ public:
         mainWindow = new MainWindow (getApplicationName());
         
         
-        int size = 654;
+        int size = 600;
         
         //640/2, 1136/2
         splash3 = new MySplash2 ("Instructions", size, size, false);
         splash3->deleteAfterDelay(RelativeTime::seconds (60), true);
         
         splash2 = new MySplash1 ("Fedor Shtern", size, size, false);
-        splash2->deleteAfterDelay(RelativeTime::seconds (2), false);
+        splash2->deleteAfterDelay(RelativeTime::seconds (8), false);
         
         
         //BinaryData::_17015043_1459264774097503_575012170_o_jpg;
@@ -133,8 +121,7 @@ public:
         image = image.rescaled(size, size);
         
         splash1 = new SplashScreen("Pic", image, false);
-        splash1->deleteAfterDelay(RelativeTime::seconds (2), false);
-
+        splash1->deleteAfterDelay(RelativeTime::seconds (4), false);
         
         //SplashScreen (const String& title, const Image& image, bool useDropShadow)
         

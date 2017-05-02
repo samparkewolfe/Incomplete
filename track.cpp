@@ -46,10 +46,11 @@ void Track::paint (Graphics& g)
 void Track::resized()
 {
     Rectangle<int> area(getLocalBounds());
-
     for(auto button : buttons)
     {
+        //area.removeFromTop(gap);
         button->setBounds(area.removeFromTop(buttonHeight));
+        //area.removeFromTop(gap);
     }
 }
 
