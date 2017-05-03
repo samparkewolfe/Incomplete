@@ -110,7 +110,7 @@ public:
         splash3 = new MySplash2 ("Instructions", size, size, false);
         splash3->deleteAfterDelay(RelativeTime::seconds (60), true);
         
-        splash2 = new MySplash1 ("Fedor Shtern", size, size, false);
+        splash2 = new MySplash1 ("IlIA STERN - INCOMPLETE", size, size, false);
         splash2->deleteAfterDelay(RelativeTime::seconds (8), false);
         
         
